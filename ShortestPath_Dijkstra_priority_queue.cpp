@@ -1,7 +1,8 @@
 //Dijkstra algorithm for shortest path
 
 #include <bits/stdc++.h>
-#define INF 0x3f3f3f3f
+#define INF 0x3f3f3f3f //for infinity
+
 using namespace std;
 vector<bool> visited;
 
