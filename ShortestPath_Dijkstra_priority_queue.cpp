@@ -24,6 +24,8 @@ void DijkstraShortestPath(vector<pair<int,int>> adj[],int V,int src){
         
         int u=pq.top().second;
         pq.pop();
+        if(visited[u]==true)
+            continue;
         visited[u]=true;
         
         for(auto x: adj[u]){
