@@ -53,17 +53,17 @@ int findMother(int nodes,vector<int> adj[]) {
 	bool vis[nodes]={false};
 	loop(i,0,nodes) {
 	   if(!vis[i]){
-	       dfs(i,vis,adj);
-	       v=i;
+	       dfs(i,vis,adj); //apply dfs on the graph and find the last visited node
+	       v=i; //save the last visited node
 	   }
 	}
 	    
-	memset(vis,false,sizeof(vis));
-	dfs(v,vis,adj);
+	memset(vis,false,sizeof(vis)); //put false in the visited array again
+	dfs(v,vis,adj); // apply dfs again on the graph starting from the last finished vertex
 	    
 	loop(i,0,nodes) {
 	   if(!vis[i]) {
-	       return -1;
+	       return -1; // if all the nodes are not visited starting from the last finished vertex then it is not mother vertex 
 	   }
 	}
 	return v;
@@ -87,7 +87,7 @@ int main() {
 	        adj[a].pub(b);
 	    }
 	    
-	    int ans = findMother(nodes,adj);
+	    int ans = findMother(nodes,adj); //call findMother() function
 	    
 	    if(ans == -1)
 	        OUT "NO MOTHER VERTEX" << endl;
