@@ -1,4 +1,7 @@
-//Dijkstra algorithm for shortest path
+/*
+Dijkstra algorithm for shortest path
+time complexity is O(Vlog(V))
+*/
 
 #include <bits/stdc++.h>
 #define INF 0x3f3f3f3f //for infinity
