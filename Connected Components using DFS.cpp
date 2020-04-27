@@ -1,4 +1,7 @@
-// Finding connected components using DFS
+/* 
+Finding connected components using DFS
+Time complexity is O(V+E)
+*/
 
 #include <bits/stdc++.h>
 typedef long long ll;
